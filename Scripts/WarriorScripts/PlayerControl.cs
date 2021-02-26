@@ -75,6 +75,10 @@ namespace Scripts.WarriorScripts
             {
                 MoveRight();
             }
+            else
+            {
+                     playerAnimationsScript.StateMovement(0);
+            }
         }
         
 }

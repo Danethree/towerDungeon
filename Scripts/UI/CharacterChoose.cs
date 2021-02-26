@@ -7,6 +7,7 @@ using Scripts;
 public class CharacterChoose : MonoBehaviour
 {
     
+    
    public void WarriorBtn()
    {
        Debug.Log("WARRIOR SELECTED!");

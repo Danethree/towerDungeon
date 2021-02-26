@@ -13,7 +13,7 @@ namespace Scripts
       public GameObject warrior,archer;
       public GameState gameState;
       public static GameManager instance;
-
+        private int id;
 
     private void Awake() {
       if(instance == null)
@@ -25,8 +25,7 @@ namespace Scripts
     }
     void Start()
     {
-      
-      
+
       
     }
 
@@ -40,13 +39,15 @@ namespace Scripts
 
      void InitializePlayer()
     {
+
+      id = PlayerPrefs.GetInt("CHARACTER");
       warrior.SetActive(false);
       archer.SetActive(false);
-      if(PlayerPrefs.GetInt("CHARACTER") == 1)
+      if(id == 1)
       {
            warrior.SetActive(true);
       }
-      else if(PlayerPrefs.GetInt("CHARACTER") == 2)
+      else if(id == 2)
       {
           archer.SetActive(true);        
       }

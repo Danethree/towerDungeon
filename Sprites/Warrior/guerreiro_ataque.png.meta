@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: b8cab7e42572097ba8f750b894f3f216
+guid: 49cca60d407b41e46941e2639952f9ca
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8957881813699754070
+    second: guerreiro_ataque_0
+  - first:
+      213: -866559542589172095
+    second: guerreiro_ataque_1
+  - first:
+      213: 7053477323567680618
+    second: guerreiro_ataque_2
+  - first:
+      213: 6541233463905949256
+    second: guerreiro_ataque_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
-  spriteExtrude: 1
+  spriteMode: 2
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +96,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: iPhone
     maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
@@ -96,7 +108,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: Android
     maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
@@ -109,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: guerreiro_ataque_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1056
+        width: 864
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa78e7a83f53fa380800000000000000
+      internalID: -8957881813699754070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guerreiro_ataque_1
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1056
+        width: 864
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1865f3fefac59f3f0800000000000000
+      internalID: -866559542589172095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guerreiro_ataque_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 992
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c468e314cf2e160800000000000000
+      internalID: 7053477323567680618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guerreiro_ataque_3
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 32
+        width: 1056
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8461301bd2127ca50800000000000000
+      internalID: 6541233463905949256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -52,6 +52,7 @@ namespace Scripts
             playerControl_script.MoveRight();
         }
     }
+        
 
    //INPUT BUTTONS
    public void UnclickMoveUp()
@@ -86,7 +87,10 @@ namespace Scripts
    {
        moveRight = false;
    }
-  
+   public void AttackBtn()
+        {
+            playerControl_script.SimpleAttack();
+        }
 }
 }
 

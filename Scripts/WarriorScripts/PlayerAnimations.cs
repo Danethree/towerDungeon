@@ -17,6 +17,10 @@ namespace Scripts.WarriorScripts
         {
              player_anim.SetInteger("state",stateP);
         }
+        public void Attack()
+        {
+            player_anim.SetTrigger("attack");
+        }
 
 
     }

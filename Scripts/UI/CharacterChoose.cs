@@ -1,3 +1,5 @@
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +14,7 @@ public class CharacterChoose : MonoBehaviour
    {
        Debug.Log("WARRIOR SELECTED!");
         PlayerPrefs.SetInt("CHARACTER",1);
-        GameManager.instance.GameOn();
+       // GameManager.instance.GameOn();
         SceneManager.LoadScene("game");
 
    }
@@ -20,7 +22,7 @@ public class CharacterChoose : MonoBehaviour
    {
          Debug.Log("ARCHER SELECTED!");
          PlayerPrefs.SetInt("CHARACTER",2);
-            GameManager.instance.GameOn();
+         //   GameManager.instance.GameOn();
             SceneManager.LoadScene("game");
    }
    private void Update() {

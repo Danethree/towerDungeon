@@ -11,19 +11,31 @@ namespace Scripts
    float moveSpeed = 5f;
    public GameObject warrior_go;
    private bool moveUp,moveDown,moveLeft,moveRight;
-   
-    // Start is called before the first frame update
+   public PlayerAnimations playerAnimations_script;
+   int id;
+    
     void Start()
     {
+          id = PlayerPrefs.GetInt("CHARACTER");
            playerControl_script = GameObject.FindWithTag("Player").GetComponent<PlayerControl>();
+           if(id == 1)
+           {
+               playerAnimations_script = GameObject.Find("Guerreiro").GetComponent<PlayerAnimations>();
+           }
+           else if(id == 2)
+           {
+                playerAnimations_script = GameObject.Find("Arqueiro").GetComponent<PlayerAnimations>();
+           }
           InitializeBooleanDirections();
     }
    
   
+
     private void Update() 
     {
         PlayerMovement();
     }
+
 
    void InitializeBooleanDirections()
    {
@@ -37,10 +49,12 @@ namespace Scripts
     {
           if(moveUp)
         {
+            playerAnimations_script.StateMovement(1);
             playerControl_script.MoveUp();
         }
         if(moveDown)
         {
+           
             playerControl_script.MoveDown();
         }
         if(moveLeft)
@@ -57,10 +71,12 @@ namespace Scripts
    //INPUT BUTTONS
    public void UnclickMoveUp()
    {
+         playerAnimations_script.StateMovement(0);
        moveUp = false;
    }
    public void ClickMoveUp()
    {
+      
        moveUp = true;
    }
    public void ClickMoveDown()
@@ -69,14 +85,17 @@ namespace Scripts
    }
    public void UnclickMoveDown()
    {
+          playerAnimations_script.StateMovement(0);
        moveDown = false;
    }
    public void CLickMoveLeft()
    {
+       
        moveLeft = true;
    }
    public void UnclickMoveLeft()
    {
+          playerAnimations_script.StateMovement(0);
        moveLeft = false;
    }
    public void ClickMoveRight()
@@ -85,12 +104,14 @@ namespace Scripts
    }
    public void UnclickMoveRight()
    {
+          playerAnimations_script.StateMovement(0);
        moveRight = false;
    }
    public void AttackBtn()
-        {
+   {
             playerControl_script.SimpleAttack();
-        }
+   }
+    
 }
 }
 

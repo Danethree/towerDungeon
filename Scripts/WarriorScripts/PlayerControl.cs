@@ -23,11 +23,11 @@ namespace Scripts.WarriorScripts
        warrior_rb = GetComponent<Rigidbody2D>();
    } 
    private void Update() {
-         
 
-            PCMovement();
-     
-   }
+           // IdlePosition();
+           //  PCMovement();
+
+        }
 
     private void IdlePosition()
         {
@@ -51,16 +51,17 @@ namespace Scripts.WarriorScripts
 
    public void MoveUp()
    {
-            Flip();
+           
             playerAnimationsScript.StateMovement(1);
-        
+            Flip();
             transform.position+=Vector3.up*moveSpeed*Time.deltaTime;
    }
     public void MoveDown()
     {
-            Flip();
+          
             playerAnimationsScript.StateMovement(2);
-         transform.position+=Vector3.down*moveSpeed*Time.deltaTime;
+            Flip();
+            transform.position+=Vector3.down*moveSpeed*Time.deltaTime;
     }
     public void MoveLeft()
     {

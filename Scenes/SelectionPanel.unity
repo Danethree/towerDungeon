@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,8 +118,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    maxJobWorkers: 0
-    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -155,7 +153,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -257,7 +254,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -341,7 +337,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1465286456}
-          m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
           m_MethodName: TouchScreen
           m_Mode: 1
           m_Arguments:
@@ -366,7 +361,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -411,7 +405,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -537,59 +530,75 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3202106319688424535, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 3202106319688424535, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: archer
       value: 
-      objectReference: {fileID: 655621466516399106, guid: 86cd3c4ac117d425dafe736a9f9d5bb1, type: 3}
-    - target: {fileID: 3202106319688424535, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+      objectReference: {fileID: 5026083143587491048, guid: 24a4efb6a89342e4baf63c8a29dd0240,
+        type: 3}
+    - target: {fileID: 3202106319688424535, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: warrior
       value: 
-      objectReference: {fileID: 240195464087067110, guid: 80fdd793a9623070aa550fbfc7fb1f5f, type: 3}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+      objectReference: {fileID: 5346040651550975656, guid: a2d13fe425054634cb4fb7f44efed0d2,
+        type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8196444253039376834, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8604130852522452516, guid: ad4e9918e003f6a65a899679e93122e0, type: 3}
+    - target: {fileID: 8604130852522452516, guid: ad4e9918e003f6a65a899679e93122e0,
+        type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
@@ -715,7 +724,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.80784315}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -796,7 +804,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1465286457}
-          m_TargetAssemblyTypeName: CharacterChoose, Assembly-CSharp
           m_MethodName: WarriorBtn
           m_Mode: 1
           m_Arguments:
@@ -821,7 +828,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -866,7 +872,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -947,7 +952,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1343033679}
-          m_TargetAssemblyTypeName: CharacterChoose, Assembly-CSharp
           m_MethodName: ArcherBtn
           m_Mode: 1
           m_Arguments:
@@ -972,7 +976,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1017,7 +1020,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1112,7 +1114,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!223 &1465286454
 Canvas:
   m_ObjectHideFlags: 0
@@ -1242,7 +1243,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1612065938}
-          m_TargetAssemblyTypeName: CharacterChoose, Assembly-CSharp
           m_MethodName: WarriorBtn
           m_Mode: 1
           m_Arguments:
@@ -1267,7 +1267,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1312,7 +1311,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1431,7 +1429,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1510,7 +1507,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

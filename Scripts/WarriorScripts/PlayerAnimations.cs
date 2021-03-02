@@ -15,6 +15,7 @@ namespace Scripts.WarriorScripts
         }
        public void StateMovement(int stateP)
         {
+            Debug.Log("State"+stateP);
              player_anim.SetInteger("state",stateP);
         }
         public void Attack()

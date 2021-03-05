@@ -65,7 +65,7 @@ namespace Scripts
    public void GameOverOptions()
     {
           
-         SceneManager.LoadScene("SelectionPanel");
+         SceneManager.LoadScene("titleMenu");
     
     }
     public void GameOn()

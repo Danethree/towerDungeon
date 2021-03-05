@@ -2,27 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
   public GameObject mainPanel; 
-  public Text informationTxt;
+ 
    int whichPlayerIsOn = 1;
  
   private void Start() {
       mainPanel.SetActive(false);
       
   }
-  public void TouchScreen()
+  public void PlayButton()
    {
-       mainPanel.SetActive(true);
+      SceneManager.LoadScene("ChoosePanel");
    
-       informationTxt.enabled = false;
-   }
-   private void Update() {
      
    }
+  public void Credits()
+  {
+      SceneManager.LoadScene("Credits");
+  }
+  public void ExitGame()
+  {
+      Application.Quit();
+  }
 
 
    public void SwitchCharacter()

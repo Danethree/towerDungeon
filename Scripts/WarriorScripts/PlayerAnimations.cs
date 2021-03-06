@@ -15,12 +15,16 @@ namespace Scripts.WarriorScripts
         }
        public void StateMovement(int stateP)
         {
-            Debug.Log("State"+stateP);
+         
              player_anim.SetInteger("state",stateP);
         }
         public void Attack()
         {
             player_anim.SetTrigger("attack");
+        }
+        public void DamageAnim()
+        {
+            player_anim.SetTrigger("hurt");
         }
 
 

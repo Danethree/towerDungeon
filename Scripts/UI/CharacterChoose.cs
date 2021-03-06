@@ -9,14 +9,14 @@ using Scripts;
 public class CharacterChoose : MonoBehaviour
 {
     
-   public GameObject warrior,archer;
+   public GameObject warriorbutton,archerbutton,archer,warrior;
    public UIAnimations anim_warrior,anim_archer;
    public UICutscene uiCutscene_script;
    public void WarriorBtn()
    {
        Debug.Log("WARRIOR SELECTED!");
         PlayerPrefs.SetInt("CHARACTER",1);
-         uiCutscene_script.panel.SetActive(false);
+       
         anim_warrior.FinalizeMovement(true);
        // GameManager.instance.GameOn();
       
@@ -26,7 +26,7 @@ public class CharacterChoose : MonoBehaviour
    {
          Debug.Log("ARCHER SELECTED!");
          PlayerPrefs.SetInt("CHARACTER",2);
-            uiCutscene_script.panel.SetActive(false);
+         archer.SetActive(true);
          anim_archer.FinalizeMovement(true);
          //   GameManager.instance.GameOn();
              Invoke("GameScene",2f);
@@ -44,15 +44,19 @@ public class CharacterChoose : MonoBehaviour
 
    public void btnNext()
    {
-      if(warrior.activeSelf)
+      if(warriorbutton.activeSelf)
       {
-         warrior.SetActive(false);
+         warriorbutton.SetActive(false);//desativa o botao do char
+         warrior.SetActive(false);//desativa o char
+         archerbutton.SetActive(true);
          archer.SetActive(true);
          
       }
-      else if(archer.activeSelf)
+      else if(archerbutton.activeSelf)
       {
+         archerbutton.SetActive(false);
          archer.SetActive(false);
+         warriorbutton.SetActive(true);
          warrior.SetActive(true);
       }
 

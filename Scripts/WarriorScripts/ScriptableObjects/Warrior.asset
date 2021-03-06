@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Warrior
   m_EditorClassIdentifier: 
   power: 0
-  life: 5
+  life: 4
   defense: 0

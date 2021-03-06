@@ -58,7 +58,7 @@ namespace Scripts
       gameState = GameState.endGame;
       if(gameState == GameState.endGame)
       {
-        SceneManager.LoadScene("GameOver");
+        Invoke("LoadGameOver",.1f);
        
       }
     }
@@ -72,6 +72,11 @@ namespace Scripts
     {
          gameState = GameState.playing;
            InitializePlayer();
+    }
+
+    public void LoadGameOver()
+    {
+       SceneManager.LoadScene("GameOver");
     }
 }
 

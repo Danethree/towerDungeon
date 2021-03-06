@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 5a2ba34d3e878b8428ba93386eda25a2
+guid: d8cb3c90e5f861a44b6d0f3a61b12227
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2128094440305176556
-    second: guerreiro_levando_dano_0
+      213: 3905853562766242608
+    second: arqueiro_levando_dano_0
   - first:
-      213: 8626089750545865175
-    second: guerreiro_levando_dano_1
+      213: -3383627371877132302
+    second: arqueiro_levando_dano_1
   - first:
-      213: 5147783215139971132
-    second: guerreiro_levando_dano_2
+      213: 848921742412202901
+    second: arqueiro_levando_dano_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 600
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,7 +120,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guerreiro_levando_dano_0
+      name: arqueiro_levando_dano_0
       rect:
         serializedVersion: 2
         x: 0
@@ -134,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cefafda4e92888d10800000000000000
-      internalID: 2128094440305176556
+      spriteID: 03330690f11643630800000000000000
+      internalID: 3905853562766242608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guerreiro_levando_dano_1
+      name: arqueiro_levando_dano_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d99ce5dce606b770800000000000000
-      internalID: 8626089750545865175
+      spriteID: 2f799fe15d0fa01d0800000000000000
+      internalID: -3383627371877132302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guerreiro_levando_dano_2
+      name: arqueiro_levando_dano_2
       rect:
         serializedVersion: 2
         x: 0
@@ -176,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c30e22f5f89907740800000000000000
-      internalID: 5147783215139971132
+      spriteID: 593c592b3d9f7cb00800000000000000
+      internalID: 848921742412202901
       vertices: []
       indices: 
       edges: []

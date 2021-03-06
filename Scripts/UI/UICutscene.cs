@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class UICutscene : MonoBehaviour
 {
-    public GameObject panel,arrow;
+    public GameObject arrow,buttonWarrior,buttonArcher;
     public GameObject unselectedChar;
-    public void ActivePanel()
-    {
-        panel.SetActive(true);
-    }
+   
     public void DisableGO()
     {
         gameObject.SetActive(false);
@@ -21,6 +18,8 @@ public class UICutscene : MonoBehaviour
 
     public void ActiveButtonSelect()
     {
-        
+        arrow.SetActive(true);
+        buttonWarrior.SetActive(true);
     }
+
 }

@@ -7,26 +7,38 @@ public class MainMenu : MonoBehaviour
 {
 
   public GameObject mainPanel; 
- 
+   float timeToLoad = 0.5f;
    int whichPlayerIsOn = 1;
  
   private void Start() {
       mainPanel.SetActive(false);
       
   }
+  public void LoadChoosePanel()
+  {
+      SceneManager.LoadScene("ChoosePanel");
+  }
+  public void LoadCredits()
+  {
+        SceneManager.LoadScene("Credits");
+  }
+  public void LoadExit()
+  {
+       Application.Quit();
+  }
   public void PlayButton()
    {
-      SceneManager.LoadScene("ChoosePanel");
-   
+      
+       Invoke("LoadChoosePanel",timeToLoad);
      
    }
   public void Credits()
   {
-      SceneManager.LoadScene("Credits");
+    Invoke("LoadCredits",timeToLoad);
   }
   public void ExitGame()
   {
-      Application.Quit();
+     Invoke("LoadExit",timeToLoad);
   }
 
 

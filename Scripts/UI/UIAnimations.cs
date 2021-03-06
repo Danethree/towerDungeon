@@ -15,6 +15,7 @@ public class UIAnimations : MonoBehaviour
     {
         ui_anim.SetBool("finalize",finalize);
     }
+   
   
 
 }

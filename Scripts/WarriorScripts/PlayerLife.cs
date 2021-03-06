@@ -14,7 +14,7 @@ namespace Scripts.WarriorScripts
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
-
+    public PlayerAnimations player_anim;
     private void Awake() {
         
         life = playerScriptalbe.life;
@@ -28,7 +28,7 @@ namespace Scripts.WarriorScripts
    
     void Update()
     {
-           VerifyGameCondition();
+          
        ControlHearts();
        
     }
@@ -65,9 +65,9 @@ namespace Scripts.WarriorScripts
 
     float TakeDamage()
     {
-       
+          player_anim.DamageAnim();
        life = life -1;
-       
+ 
 
        return life;
     }
@@ -75,8 +75,10 @@ namespace Scripts.WarriorScripts
    private void OnCollisionEnter2D(Collision2D other) {
        if(other.gameObject.CompareTag("enemy"))
        {
-        
+         
            TakeDamage();
+          
+          
        }
    }
 

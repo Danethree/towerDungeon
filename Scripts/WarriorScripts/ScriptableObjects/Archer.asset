@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Archer
   m_EditorClassIdentifier: 
   power: 0
-  life: 3
+  life: 4
   defense: 0

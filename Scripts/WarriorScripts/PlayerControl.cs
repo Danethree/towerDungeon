@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Scripts.WarriorScripts.PlayerArrow;
 //using UnityStandardAssets.CrossPlatformInput;
 
 
@@ -12,15 +13,23 @@ namespace Scripts.WarriorScripts
     public class PlayerControl : MonoBehaviour,IPlayer
 {
  
+   public GameObject archer,warrior,arrowPrefab;
+ [HideInInspector] public GameObject player;
+   public Transform spawnPos;
    Rigidbody2D warrior_rb;
    float dirX;
    float moveSpeed = 10f;
    public PlayerAnimations playerAnimationsScript;
-        bool flipX;
+   public bool isAttack;
+
+ 
+     [HideInInspector]  public bool flipX;
 
    private void Start() {
-      
+        player = this.gameObject;
        warrior_rb = GetComponent<Rigidbody2D>();
+       
+     
    } 
    private void Update() {
 
@@ -82,8 +91,53 @@ namespace Scripts.WarriorScripts
     }
     public void SimpleAttack()
     {
+      
+        if(!isAttack)
+        {
+            
             playerAnimationsScript.Attack();
+            if(archer.activeSelf)
+            {
+                 StartCoroutine("InvokeArrow");
+                  
+            }
+            else if(warrior.activeSelf)
+            {
+                StartCoroutine("warriorAttackRate");
+            }
+        }
+         
+           
     }
+
+    public IEnumerator InvokeArrow()
+    {
+          isAttack = true;
+        GameObject arrowTemp =  Instantiate(arrowPrefab,spawnPos.position,Quaternion.identity) as GameObject;
+        arrowTemp.transform.localScale = transform.localScale;
+                if(flipX)
+                {
+                    arrowTemp.GetComponent<Arrow>().VerifyArrowPosition(Vector2.left);
+                }
+                else if(!flipX)
+                {
+                     arrowTemp.GetComponent<Arrow>().VerifyArrowPosition(Vector2.right);
+                }
+                  
+               
+                 Destroy(arrowTemp,3f);
+                 yield return new WaitForSeconds(.5f);
+                 isAttack = false;
+            
+    }
+
+    IEnumerator warriorAttackRate()
+    {
+        isAttack = true;
+        yield return new WaitForSeconds(.5f);
+        isAttack = false;
+    }
+ 
 
     public void PCMovement()
         {
@@ -113,7 +167,11 @@ namespace Scripts.WarriorScripts
             }
            
         }
-        
+     //ARROW 
+
+
 }
+
+
 
 }

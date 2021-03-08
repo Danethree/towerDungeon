@@ -63,7 +63,7 @@ namespace Scripts.WarriorScripts
         }
     }
 
-    float TakeDamage()
+   public float TakeDamage()
     {
           player_anim.DamageAnim();
        life = life -1;

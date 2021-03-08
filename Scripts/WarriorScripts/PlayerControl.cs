@@ -18,10 +18,10 @@ namespace Scripts.WarriorScripts
    public Transform spawnPos;
    Rigidbody2D warrior_rb;
    float dirX;
-   float moveSpeed = 10f;
+   [HideInInspector]public float moveSpeed = 10f;
    public PlayerAnimations playerAnimationsScript;
    public bool isAttack;
-
+        [HideInInspector] public float attackRate =1f;
  
      [HideInInspector]  public bool flipX;
 
@@ -126,7 +126,7 @@ namespace Scripts.WarriorScripts
                   
                
                  Destroy(arrowTemp,3f);
-                 yield return new WaitForSeconds(.5f);
+                 yield return new WaitForSeconds(attackRate);
                  isAttack = false;
             
     }
@@ -134,7 +134,7 @@ namespace Scripts.WarriorScripts
     IEnumerator warriorAttackRate()
     {
         isAttack = true;
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(attackRate);
         isAttack = false;
     }
  

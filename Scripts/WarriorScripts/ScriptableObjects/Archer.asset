@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005ecc34e15b2326da82dab181242a42, type: 3}
   m_Name: Archer
   m_EditorClassIdentifier: 
-  power: 0
+  power: 1
   life: 4
   defense: 0

@@ -72,15 +72,8 @@ namespace Scripts.WarriorScripts
        return life;
     }
 
-   private void OnCollisionEnter2D(Collision2D other) {
-       if(other.gameObject.CompareTag("enemy"))
-       {
-         
-           TakeDamage();
-          
-          
-       }
-   }
+   
+   
 
    public void VerifyGameCondition()
    {
@@ -90,7 +83,7 @@ namespace Scripts.WarriorScripts
        }
    }
    
+}
+}
 
-}
-}
 

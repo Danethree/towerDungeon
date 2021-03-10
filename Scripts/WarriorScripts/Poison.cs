@@ -19,12 +19,16 @@ namespace Scripts.WarriorScripts
 
         }
 
+
+
         IEnumerator poisonPlayer()
         {
 
             player_sprite.color = new Color(118, 0, 95,255);
+         
             while (isPoisoned)
             {
+             
                 yield return new WaitForSeconds(3f);
                 playerLife_script.TakeDamage();
             }
@@ -46,6 +50,7 @@ namespace Scripts.WarriorScripts
             if (isPoisoned)
             {
                 StartCoroutine("endPoisoned");
+                   player_sprite.color = Color.Lerp(new Color(118, 0, 95,255),Color.white,Mathf.PingPong(2*Time.time,.5f));
             }
         }
         void OnTriggerEnter2D(Collider2D other)

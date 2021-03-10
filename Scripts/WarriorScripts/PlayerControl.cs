@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Scripts.WarriorScripts.PlayerArrow;
 //using UnityStandardAssets.CrossPlatformInput;
-
+using Scripts.WarriorScripts.ScriptableObjects;
 
   //This Script is responsable for control Player Inputs
 
@@ -24,10 +24,12 @@ namespace Scripts.WarriorScripts
         [HideInInspector] public float attackRate =1f;
  
      [HideInInspector]  public bool flipX;
-
+    public PlayerSO player_scriptable;
+    public int myPower;
    private void Start() {
         player = this.gameObject;
        warrior_rb = GetComponent<Rigidbody2D>();
+       myPower = player_scriptable.power;
        
      
    } 

@@ -8,6 +8,7 @@ namespace Enemy.EnemyScriptableObjects
 public class EnemySO : ScriptableObject {
     public float speed;
     public float life;
+    public float timeToStop;
 
 }
 }

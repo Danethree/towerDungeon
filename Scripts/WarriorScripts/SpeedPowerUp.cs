@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 namespace Scripts.WarriorScripts
 {
     public class SpeedPowerUp : MonoBehaviour
@@ -38,9 +38,9 @@ namespace Scripts.WarriorScripts
                 if (isFast)
                 {
                     isFast = false;
-
+                  playerSprite.color = Color.Lerp(Color.red,Color.white,Mathf.PingPong(2*Time.time,.5f));
                 }
-
+                  playerSprite.color = Color.Lerp(Color.red,Color.white,Mathf.PingPong(2*Time.time,.5f));
             }
 
             else if (isFast)
@@ -48,9 +48,9 @@ namespace Scripts.WarriorScripts
                 if (isSlow)
                 {
                     isSlow = false;
-
+                       playerSprite.color = Color.Lerp(Color.blue,Color.white,Mathf.PingPong(2*Time.time,.5f));
                 }
-
+                   playerSprite.color = Color.Lerp(Color.blue,Color.white,Mathf.PingPong(2*Time.time,.5f));
 
             }
         }
@@ -81,7 +81,7 @@ namespace Scripts.WarriorScripts
 public IEnumerator PowerUpSpeed()
 {
     isFast = true;
-            playerSprite.color = Color.blue;
+           
             currentPower = playerControl_script.moveSpeed + powerSpeed;
     playerControl_script.moveSpeed = currentPower;
             currentAttack = 0.1f;
@@ -99,7 +99,7 @@ public IEnumerator PowerUpSpeed()
 public IEnumerator PowerDownSpeed()
 {
     isSlow = true;
-            playerSprite.color = Color.red;
+           
             currentPower = playerControl_script.moveSpeed - powerSpeed;
     playerControl_script.moveSpeed = currentPower;
     currentAttack = 2f;
@@ -114,23 +114,6 @@ public IEnumerator PowerDownSpeed()
 
     
 }
-
-IEnumerator colorPowerDown()
-{
-   
-   playerSprite.color = Color.red;
-    yield return new WaitForSeconds(0.5f);
-   playerSprite.color = Color.white;
-   
-}
-
-  IEnumerator colorPowerUp()
-        {
-            
-            playerSprite.color = Color.blue;
-            yield return new WaitForSeconds(0.5f);
-            playerSprite.color = Color.white;
-        }
 
 
 }

@@ -29,6 +29,7 @@ public class CharacterChoose : MonoBehaviour
          archer.SetActive(true);
          anim_archer.FinalizeMovement(true);
          //   GameManager.instance.GameOn();
+    
              Invoke("GameScene",2f);
    }
    private void Update() {

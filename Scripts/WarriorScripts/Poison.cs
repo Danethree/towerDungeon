@@ -2,53 +2,63 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Scripts.WarriorScripts;
+using UnityEngine.UI;
 
-
-public class Poison : MonoBehaviour
+namespace Scripts.WarriorScripts
 {
-    PlayerLife playerLife_script;
-    bool isPoisoned;
-    void Start()
+    public class Poison : MonoBehaviour
     {
-        playerLife_script = GetComponent<PlayerLife>();
-    }
+        PlayerLife playerLife_script;
+        bool isPoisoned;
+        SpriteRenderer player_sprite;
 
-    IEnumerator poisonPlayer()
-    {
-        
-        yield return new WaitForSeconds(0.1f);
-       
-        isPoisoned = false;
- 
-    }
+        void Start()
+        {
+            playerLife_script = GetComponent<PlayerLife>();
+            player_sprite = GetComponent<SpriteRenderer>();
 
-    void Poisoned()
-    {
-        isPoisoned = true;
-        float time = 1*Time.deltaTime;
-         for(int i = 0;i<=2;i++)
-        {
-            time = time++;
-            
         }
-         if(time <=0)
+
+        IEnumerator poisonPlayer()
         {
-            StartCoroutine(poisonPlayer());
-        }
-    }
-    void Update()
-    {
-        
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("poison"))
-        {
-            if(!isPoisoned)
+
+            player_sprite.color = new Color(118, 0, 95,255);
+            while (isPoisoned)
             {
+                yield return new WaitForSeconds(3f);
                 playerLife_script.TakeDamage();
             }
-            
+
+        }
+
+
+        IEnumerator endPoisoned()
+        {
+            yield return new WaitForSeconds(10f);
+            StopCoroutine("poisonPlayer");
+            isPoisoned = false;
+            player_sprite.color = Color.white;
+
+        }
+
+        void Update()
+        {
+            if (isPoisoned)
+            {
+                StartCoroutine("endPoisoned");
+            }
+        }
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("poison"))
+            {
+                if (!isPoisoned)
+                {
+                    isPoisoned = true;
+                    StartCoroutine("poisonPlayer");
+                }
+            }
         }
     }
 }
+

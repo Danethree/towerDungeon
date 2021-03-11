@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUp : MonoBehaviour
+namespace Scripts.WarriorScripts
+{
+    public class PowerUp : MonoBehaviour
 {
     
     void OnTriggerEnter2D(Collider2D other)
@@ -12,5 +14,7 @@ public class PowerUp : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+}
 
 }

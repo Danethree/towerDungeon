@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Enemy.EnemyScriptableObjects;
 using Scripts.WarriorScripts.ScriptableObjects;
+namespace Scripts.Enemy
+{
+    
 public class EnemyLife : MonoBehaviour
 {
   
@@ -57,5 +60,7 @@ public class EnemyLife : MonoBehaviour
     }
    
     
+
+}
 
 }

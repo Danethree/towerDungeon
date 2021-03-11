@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class SceneTransition : MonoBehaviour
+
+namespace Scripts.UI
+{
+    public class SceneTransition : MonoBehaviour
 {
     public int time;
-    void Start()
-    {
-       
-    }
-
+ 
     void Update()
     {
          StartCoroutine("LoadScene");
@@ -21,4 +20,6 @@ public class SceneTransition : MonoBehaviour
          SceneManager.LoadScene("titleMenu");
 
     } 
+}
+
 }

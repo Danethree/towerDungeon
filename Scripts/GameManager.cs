@@ -77,6 +77,7 @@ namespace Scripts
     public void LoadGameOver()
     {
        SceneManager.LoadScene("GameOver");
+       SoundManager.instance.StopMusicTheme();
     }
 }
 

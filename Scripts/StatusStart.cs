@@ -10,6 +10,7 @@ namespace Scripts
     void Start()
     {
         GameManager.instance.gameState = GameState.starting;
+        SoundManager.instance.PlayMusicMenu();
         
     }
 

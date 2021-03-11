@@ -8,7 +8,7 @@ namespace Scripts
     {
         int id;
         public GameObject warrior, archer;
-      
+        
 
         void Awake()
         {
@@ -26,13 +26,13 @@ namespace Scripts
                 warrior.SetActive(false);
             }
             GameManager.instance.gameState = WarriorScripts.PlayerEnumerators.GameState.playing;
-            SoundManager.instance.PlayMusicTheme();
+         
           
             
         }
         void Start()
         {
-            
+               SoundManager.instance.PlayMusicTheme();
         }
 
         

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIAnimations : MonoBehaviour
+namespace Scripts.UI
+{
+    public class UIAnimations : MonoBehaviour
 {
     public GameObject warrior,archer;
    
@@ -17,5 +19,7 @@ public class UIAnimations : MonoBehaviour
     }
    
   
+
+}
 
 }

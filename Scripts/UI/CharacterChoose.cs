@@ -4,9 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+
 using Scripts;
-public class CharacterChoose : MonoBehaviour
+
+namespace Scripts.UI
+{
+    public class CharacterChoose : MonoBehaviour
 {
     
    public GameObject warriorbutton,archerbutton,archer,warrior;
@@ -70,3 +73,5 @@ public class CharacterChoose : MonoBehaviour
    }
    
 }
+}
+

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Enemy
+namespace Scripts.Enemy
 {
     public interface IEnemy 
 {

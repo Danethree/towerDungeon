@@ -14,16 +14,23 @@ namespace Scripts
    public PlayerAnimations playerAnimations_script;
    int id;
     
+     void Awake()
+    {
+       
+    }
     void Start()
     {
+      
           id = PlayerPrefs.GetInt("CHARACTER");
-           playerControl_script = GameObject.FindWithTag("Player").GetComponent<PlayerControl>();
+   
            if(id == 1)
            {
+                   playerControl_script = GameObject.Find("Guerreiro").GetComponent<PlayerControl>();
                playerAnimations_script = GameObject.Find("Guerreiro").GetComponent<PlayerAnimations>();
            }
            else if(id == 2)
            {
+                   playerControl_script = GameObject.Find("Arqueiro").GetComponent<PlayerControl>();
                 playerAnimations_script = GameObject.Find("Arqueiro").GetComponent<PlayerAnimations>();
            }
           InitializeBooleanDirections();
@@ -54,15 +61,17 @@ namespace Scripts
         }
         if(moveDown)
         {
-           
+            playerAnimations_script.StateMovement(1);
             playerControl_script.MoveDown();
         }
         if(moveLeft)
         {
+              playerAnimations_script.StateMovement(3);
             playerControl_script.MoveLeft();
         }
         if(moveRight)
         {
+                playerAnimations_script.StateMovement(4);
             playerControl_script.MoveRight();
         }
     }

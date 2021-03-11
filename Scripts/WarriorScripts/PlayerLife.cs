@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Scripts.WarriorScripts.ScriptableObjects;
 using UnityEngine.UI;
+
 namespace Scripts.WarriorScripts
 {
     public class PlayerLife : MonoBehaviour

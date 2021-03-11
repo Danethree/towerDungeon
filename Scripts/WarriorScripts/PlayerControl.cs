@@ -4,7 +4,7 @@ using UnityEngine;
 using Scripts.WarriorScripts.PlayerArrow;
 //using UnityStandardAssets.CrossPlatformInput;
 using Scripts.WarriorScripts.ScriptableObjects;
-
+using Scripts;
   //This Script is responsable for control Player Inputs
 
 namespace Scripts.WarriorScripts

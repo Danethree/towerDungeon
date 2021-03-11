@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UICutscene : MonoBehaviour
+namespace Scripts.UI
+{
+    public class UICutscene : MonoBehaviour
 {
     public GameObject arrow,buttonWarrior,buttonArcher;
     public GameObject unselectedChar;
@@ -21,5 +23,7 @@ public class UICutscene : MonoBehaviour
         arrow.SetActive(true);
         buttonWarrior.SetActive(true);
     }
+
+}
 
 }

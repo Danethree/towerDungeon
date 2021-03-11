@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Enemy.EnemyScriptableObjects;
 
-namespace Enemy
+namespace Scripts.Enemy
 {
     public class Pirsuiter : MonoBehaviour
 {

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1881874346222474971}
   - component: {fileID: -689847892063849998}
   - component: {fileID: 7943615328944595092}
-  - component: {fileID: 4606937621751916052}
+  - component: {fileID: -8904039269047007756}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: PlayerAttack
@@ -144,7 +144,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4606937621751916052
+--- !u!114 &-8904039269047007756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,6 +153,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 718397686093822311}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 166db975c9d6a764c9ddcbe49e0090e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 954a86b9a567aa0459210050127d25ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

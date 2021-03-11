@@ -37,6 +37,14 @@ namespace Scripts
         {
             musicMenu.Stop();
         }
+        public void StopMusicTheme()
+        {
+            musicTheme.Stop();
+        }
+        public void PlayMusicMenu()
+        {
+            musicMenu.Play();
+        }
         void Update()
         {
            

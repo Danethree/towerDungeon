@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class CreditsUI : MonoBehaviour
+
+namespace Scripts.UI
+{
+    public class CreditsUI : MonoBehaviour
 {
 
   
@@ -12,3 +15,5 @@ public class CreditsUI : MonoBehaviour
    }
  
 }
+}
+

@@ -13,8 +13,8 @@ public class EnemyLife : MonoBehaviour
     public SpriteRenderer enemy_sprite;
     bool damaged;
     public float life,strenght;
- 
-
+    Transform spawnPos;
+     Points points_script;
      Transform player;
    
     void Start()
@@ -23,6 +23,8 @@ public class EnemyLife : MonoBehaviour
         life = enemy_scriptable.life;
         
         player = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        spawnPos = GetComponent<Transform>();
+        points_script = GetComponent<Points>();
       
     }
 
@@ -55,6 +57,9 @@ public class EnemyLife : MonoBehaviour
     {
         if(life<=0)
         {
+
+            SpawnCoins.instance.coinSpawn(spawnPos);
+            points_script.AddRewardPoints();
             Destroy(gameObject);
         }
     }

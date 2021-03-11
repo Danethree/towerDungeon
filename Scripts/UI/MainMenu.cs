@@ -25,6 +25,10 @@ namespace Scripts.UI
   {
         SceneManager.LoadScene("Credits");
   }
+  public void LoadRank()
+  {
+      SceneManager.LoadScene("Rank");
+  }
   public void LoadExit()
   {
        Application.Quit();
@@ -34,6 +38,10 @@ namespace Scripts.UI
       
        Invoke("LoadChoosePanel",timeToLoad);
      
+   }
+   public void RankButton()
+   {
+       Invoke("LoadRank",timeToLoad);
    }
   public void Credits()
   {

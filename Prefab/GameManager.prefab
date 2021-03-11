@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8196444253039376834}
   - component: {fileID: 3202106319688424535}
+  - component: {fileID: 2007182420}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,3 +47,17 @@ MonoBehaviour:
   warrior: {fileID: 0}
   archer: {fileID: 0}
   gameState: 0
+--- !u!114 &2007182420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604130852522452516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434605d2448bc874e8ebbe410ff72e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 2207522340600753829, guid: 4c3b4ee2eaa3a0c4c8572f68977dd6b5,
+    type: 3}

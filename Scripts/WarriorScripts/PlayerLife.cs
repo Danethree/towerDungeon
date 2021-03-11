@@ -16,6 +16,7 @@ namespace Scripts.WarriorScripts
     public Sprite fullHeart;
     public Sprite emptyHeart;
     public PlayerAnimations player_anim;
+    private Text pointTxt;
     private void Awake() {
         
         life = playerScriptalbe.life;
@@ -24,7 +25,7 @@ namespace Scripts.WarriorScripts
     }
    
    private void Start() {
-       
+        pointTxt = GameObject.Find("pointsTxt").GetComponent<Text>();
    }
    
     void Update()
@@ -80,6 +81,7 @@ namespace Scripts.WarriorScripts
    {
        if(life<=0)
        {
+         
            GameManager.instance.GameOver();
        }
    }

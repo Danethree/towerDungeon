@@ -11,7 +11,12 @@ namespace Scripts.UI
   
    public void Back()
    {
-       SceneManager.LoadScene("titleMenu");
+      
+    
+       
+            SceneManager.LoadScene("titleMenu");
+       
+      
    }
  
 }

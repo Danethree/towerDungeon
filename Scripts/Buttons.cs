@@ -35,6 +35,12 @@ namespace Scripts
                    playerControl_script = GameObject.Find("Arqueiro").GetComponent<PlayerControl>();
                 playerAnimations_script = GameObject.Find("Arqueiro").GetComponent<PlayerAnimations>();
            }
+           else if(id==3)
+           {
+        
+                   playerControl_script = GameObject.Find("Mago").GetComponent<PlayerControl>();
+                playerAnimations_script = GameObject.Find("Mago").GetComponent<PlayerAnimations>();
+           }
           InitializeBooleanDirections();
     }
    

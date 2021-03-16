@@ -13,7 +13,7 @@ namespace Scripts.WarriorScripts
     public class PlayerControl : MonoBehaviour,IPlayer
 {
     public AudioSource attackFx;
-   public GameObject archer,warrior,arrowPrefab;
+   public GameObject archer,warrior,mage,firePrefab,arrowPrefab;
  [HideInInspector] public GameObject player;
    public Transform spawnPos;
    Rigidbody2D warrior_rb;
@@ -108,6 +108,7 @@ namespace Scripts.WarriorScripts
             {
                 StartCoroutine("warriorAttackRate");
             }
+        
         }
          
            

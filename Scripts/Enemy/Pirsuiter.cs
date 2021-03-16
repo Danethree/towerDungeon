@@ -30,13 +30,14 @@ namespace Scripts.Enemy
     }
     public void PirsuitPlayer()
     {
-        PirsuitBehaviour();
+         PirsuitBehaviour();
 
     }
 
         public void PirsuitBehaviour()
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position,speed*Time.deltaTime);
+           
+                 transform.position = Vector2.MoveTowards(transform.position, player.position,speed*Time.deltaTime);
                 if(player.transform.position.x<gameObject.transform.position.x)
                 {
                     transform.localScale = new Vector3(-1,1,1);
@@ -45,6 +46,8 @@ namespace Scripts.Enemy
                 {
                     transform.localScale = new Vector3(1,1,1);
                 }
+            
+           
         }
 }
 

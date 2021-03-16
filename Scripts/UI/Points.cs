@@ -11,7 +11,9 @@ public class Points : MonoBehaviour
     public EnemySO enemy_scriptable;
     void Start()
     {
+
         pointsTxt = GameObject.Find("pointsTxt").GetComponent<Text>();
+        pointsNbr = PlayerPrefs.GetInt("ENEMYPOINTS");
         record = PlayerPrefs.GetInt("POINTSRECORD");
     }
 
@@ -20,12 +22,14 @@ public class Points : MonoBehaviour
         if(enemy_scriptable.enemy_classification == EnemyClassification.snake)
         {
             pointsNbr +=5;
+            PlayerPrefs.SetInt("ENEMYPOINTS",pointsNbr);
             pointsTxt.text = pointsNbr.ToString();
             SavePoints();
         }
          if(enemy_scriptable.enemy_classification == EnemyClassification.skeleton)
         {
             pointsNbr +=10;
+            PlayerPrefs.SetInt("ENEMYPOINTS",pointsNbr);
             pointsTxt.text = pointsNbr.ToString();
             SavePoints();
         }
@@ -34,9 +38,9 @@ public class Points : MonoBehaviour
     public void SavePoints()
     {
       
-        if(record<pointsNbr)
+        if(record<PlayerPrefs.GetInt("ENEMYPOINTS"))
         {
-              record = pointsNbr;
+              record = PlayerPrefs.GetInt("ENEMYPOINTS");
               PlayerPrefs.SetInt("POINTSRECORD",record);
         }
     }

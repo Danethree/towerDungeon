@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Scripts.UI;
 
 namespace Scripts.WarriorScripts
 {
@@ -14,7 +14,8 @@ namespace Scripts.WarriorScripts
            
            public PlayerControl playerControl_script;
             int powered;
-            public bool powerUpActivated;
+            public bool powerUpActivated = false;
+            public PowerUpUI powerUpUI_script;
             void Start()
             {
                 playerLife_script = GetComponent<PlayerLife>();
@@ -23,13 +24,15 @@ namespace Scripts.WarriorScripts
                 savePreviousPower = playerControl_script.myPower;
                 powered = 5;
                 player_sprite = GetComponent<SpriteRenderer>();
-
+                       powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.force_img,powerUpActivated);
             }
             void Update()
             {
                 if(powerUpActivated)
                 {
                     player_sprite.color = Color.Lerp(Color.blue,Color.white,Mathf.PingPong(2*Time.time,.5f));
+                          powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.force_img,powerUpActivated);
+              
                 }
             }
             void OnTriggerEnter2D(Collider2D other)
@@ -50,6 +53,7 @@ namespace Scripts.WarriorScripts
                     player_sprite.color = Color.white;
                     playerControl_script.myPower = savePreviousPower;           
                      Debug.Log( "Power atual: "+playerControl_script.myPower);
+                       powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.force_img,powerUpActivated);
                     
 
                 }

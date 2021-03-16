@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using Scripts.WarriorScripts;
 using UnityEngine.UI;
-
+using Scripts.UI;
 namespace Scripts.WarriorScripts
 {
     public class Poison : MonoBehaviour
     {
         PlayerLife playerLife_script;
-        bool isPoisoned;
+        bool isPoisoned = false;
         SpriteRenderer player_sprite;
-
+        public PowerUpUI powerUpUI_script;
         void Start()
         {
             playerLife_script = GetComponent<PlayerLife>();
             player_sprite = GetComponent<SpriteRenderer>();
-
+            powerUpUI_script = GameObject.Find("panelpowerUp").GetComponent<PowerUpUI>();
+                powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.poison_img,isPoisoned);
         }
 
 
@@ -25,7 +26,7 @@ namespace Scripts.WarriorScripts
         {
 
             player_sprite.color = new Color(118, 0, 95,255);
-         
+            powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.poison_img,isPoisoned);
             while (isPoisoned)
             {
              
@@ -42,7 +43,7 @@ namespace Scripts.WarriorScripts
             StopCoroutine("poisonPlayer");
             isPoisoned = false;
             player_sprite.color = Color.white;
-
+            powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.poison_img,isPoisoned);
         }
 
         void Update()

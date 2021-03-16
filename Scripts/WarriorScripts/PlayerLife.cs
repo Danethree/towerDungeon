@@ -74,8 +74,14 @@ namespace Scripts.WarriorScripts
        return life;
     }
 
-   
-   
+   //little-2 hearts
+   //medium-3 hearts
+   //hard- 6 hearts
+   public float RestoreLife(int recoverIntensity)
+   {
+       life = life + recoverIntensity;
+       return life;
+   }
 
    public void VerifyGameCondition()
    {

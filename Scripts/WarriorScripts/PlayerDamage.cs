@@ -18,6 +18,21 @@ using UnityEngine;
                playerLife_script.TakeDamage();
            }
        }
+       void OnTriggerEnter2D(Collider2D other)
+       {
+           if(other.gameObject.CompareTag("littleLife"))
+           {
+               playerLife_script.RestoreLife(2);
+           }
+           else if(other.gameObject.CompareTag("mediumLife"))
+           {
+               playerLife_script.RestoreLife(3);
+           }
+           else if(other.gameObject.CompareTag("fullLife"))
+           {
+               playerLife_script.RestoreLife(6);
+           }
+       }
     }
 
     }

@@ -10,7 +10,7 @@ namespace Scripts.UI
     {
     
             int pointCoins,recordPointCoins;
-            Text pointCoinsTxt;
+           public Text pointCoinsTxt;
             void Start()
             {
                 pointCoinsTxt = GameObject.FindWithTag("coinIUI").GetComponent<Text>();

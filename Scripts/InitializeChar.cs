@@ -7,7 +7,7 @@ namespace Scripts
     public class InitializeChar : MonoBehaviour
     {
         int id;
-        public GameObject warrior, archer;
+        public GameObject warrior, archer,mage;
         
 
         void Awake()
@@ -18,13 +18,23 @@ namespace Scripts
                 Debug.Log("id:"+id);
                 warrior.SetActive(true);
                 archer.SetActive(false);
+                mage.SetActive(false);
             }
-            else
+            else if(id==2)
             {
                 Debug.Log("id:" + id);
                 archer.SetActive(true);
                 warrior.SetActive(false);
+                mage.SetActive(false);
             }
+            else if(id==3)
+            {
+                mage.SetActive(true);
+                archer.SetActive(false);
+                warrior.SetActive(false);
+            }
+            
+               PlayerPrefs.SetInt("ENEMYPOINTS",0);
             GameManager.instance.gameState = WarriorScripts.PlayerEnumerators.GameState.playing;
          
           

@@ -167,6 +167,7 @@ MonoBehaviour:
   enemy_sprite: {fileID: 0}
   life: 0
   strenght: 3
+  enemy_vizualizer: {fileID: 3125878097756353136}
 --- !u!114 &3125878097125714547
 MonoBehaviour:
   m_ObjectHideFlags: 0

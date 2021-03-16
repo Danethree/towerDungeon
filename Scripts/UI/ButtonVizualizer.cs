@@ -1,31 +1,31 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ButtonVizualizer : MonoBehaviour
 {
     
-    public GameObject buttonChest;
-
+       public GameObject button;
+     
 
     void Start()
     {
-        buttonChest.SetActive(false);
+        button.SetActive(false);
     }
    void OnTriggerEnter2D(Collider2D other)
-   {
-       if(other.gameObject.CompareTag("Player"))
-       {
-           buttonChest.SetActive(true);
-       }
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            button.SetActive(true);
+        }
    }
 
     void OnTriggerExit2D(Collider2D other)
    {
-       if(other.gameObject.CompareTag("Player"))
-       {
-           buttonChest.SetActive(false);
-       }
+        if(other.gameObject.CompareTag("Player"))
+        {
+            button.SetActive(false);
+        }
    }
 
 }

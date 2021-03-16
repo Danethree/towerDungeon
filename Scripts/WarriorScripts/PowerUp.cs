@@ -15,6 +15,11 @@ namespace Scripts.WarriorScripts
         }
     }
 
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
 }
 
 }

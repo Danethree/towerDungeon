@@ -9,6 +9,8 @@ namespace Scripts
         public static SoundManager instance;
         public AudioSource musicTheme, musicMenu;
         public AudioClip musicIntro;
+          AudioSource soundFX;
+       
 
 
         void Awake()
@@ -45,10 +47,17 @@ namespace Scripts
         {
             musicMenu.Play();
         }
+
+        public void PlayAttackFx(AudioSource soundEffects)
+        {
+            soundFX = soundEffects;
+            soundEffects.Play();
+        }
         void Update()
         {
            
         }
+      
         
     }
 

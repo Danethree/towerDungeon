@@ -8,7 +8,7 @@ namespace Scripts.WarriorScripts.Camera
     public class CameraFollow : MonoBehaviour
 {
     public Transform target;
-    public GameObject archer,warrior;
+    public GameObject archer,warrior,mage;
     private Vector2     velocity;
      public Vector2      smoothTime;
     void Start()
@@ -20,6 +20,10 @@ namespace Scripts.WarriorScripts.Camera
         else if(warrior.activeSelf)
         {
              target = warrior.GetComponent<Transform>();
+        }
+        else if(mage.activeSelf)
+        {
+            target = mage.GetComponent<Transform>();
         }
        
     }

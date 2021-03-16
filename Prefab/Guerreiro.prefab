@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 3691003364757226989}
   - component: {fileID: 7548093686943209377}
   - component: {fileID: 467491518393155328}
+  - component: {fileID: 3533752860066404221}
   - component: {fileID: 5207301993217423460}
   - component: {fileID: 2854245546044294719}
   - component: {fileID: 615049580033044613}
@@ -160,6 +161,7 @@ GameObject:
   - component: {fileID: 1437727715238546210}
   - component: {fileID: 1437727715238546212}
   - component: {fileID: 1437727715238546213}
+  - component: {fileID: 1437727715238546211}
   m_Layer: 0
   m_Name: Guerreiro
   m_TagString: Player
@@ -254,6 +256,102 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!82 &3533752860066404221
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346040651550975656}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6e40b14bf3822bd45bab04c5f6581191, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &5207301993217423460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b559acc46dc4351d591a8d32c103d82b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackFx: {fileID: 3533752860066404221}
   archer: {fileID: 0}
   warrior: {fileID: 5346040651550975656}
   arrowPrefab: {fileID: 718397686093822311, guid: a4715594bae926d4ba62751e505899f8,
@@ -293,7 +392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScriptalbe: {fileID: 11400000, guid: b5a9b463bdf7e7de49111957d23b02d0, type: 2}
   life: 0
-  numberOfHearts: 4
+  numberOfHearts: 6
   hearts:
   - {fileID: 0}
   - {fileID: 0}
@@ -365,8 +464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425c84a6fde955c6ea526a477540e328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControl_script: {fileID: 0}
-  warrior_go: {fileID: 0}
+  playerControl_script: {fileID: 5207301993217423460}
+  warrior_go: {fileID: 5346040651550975656}
   playerAnimations_script: {fileID: 7326576178412649067}
 --- !u!114 &1437727715238546212
 MonoBehaviour:
@@ -392,8 +491,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3aadec314669e4798cd621c5d2ef9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_sprite: {fileID: 0}
-  playerLife_script: {fileID: 0}
+  player_sprite: {fileID: 7548093686943209377}
+  playerLife_script: {fileID: 2854245546044294719}
   savePreviousPower: 0
-  playerControl_script: {fileID: 0}
+  playerControl_script: {fileID: 5207301993217423460}
   powerUpActivated: 0
+--- !u!61 &1437727715238546211
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346040651550975656}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.19454193, y: 0.08367418}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.048, y: 2.048}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.45401, y: 0.4796112}
+  m_EdgeRadius: 0

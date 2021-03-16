@@ -12,7 +12,9 @@ namespace Scripts
    public GameObject warrior_go;
    private bool moveUp,moveDown,moveLeft,moveRight;
    public PlayerAnimations playerAnimations_script;
+   
    int id;
+
     
      void Awake()
     {
@@ -118,7 +120,9 @@ namespace Scripts
    }
    public void AttackBtn()
    {
+         
             playerControl_script.SimpleAttack();
+            
    }
     
 }

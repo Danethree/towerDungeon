@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Scripts.UI;
 namespace Scripts.WarriorScripts
 {
     public class SpeedPowerUp : MonoBehaviour
@@ -12,7 +12,7 @@ namespace Scripts.WarriorScripts
     float currentPower, time,currentAttack;
     bool isSlow,isFast;
     SpriteRenderer playerSprite;
-
+     public PowerUpUI powerUpUI_script;
     void Start()
     {
          
@@ -25,6 +25,9 @@ namespace Scripts.WarriorScripts
         isSlow = false;
         isFast = false;
         playerSprite = GetComponent<SpriteRenderer>();
+          powerUpUI_script = GameObject.Find("panelpowerUp").GetComponent<PowerUpUI>();
+         powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.fast_img,isFast);
+            powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.slow_img,isSlow);
     }  
     void Update()
     {
@@ -39,6 +42,8 @@ namespace Scripts.WarriorScripts
                 {
                     isFast = false;
                   playerSprite.color = Color.Lerp(Color.red,Color.white,Mathf.PingPong(2*Time.time,.5f));
+                   powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.slow_img,isSlow);
+                    powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.fast_img,isFast);
                 }
                   playerSprite.color = Color.Lerp(Color.red,Color.white,Mathf.PingPong(2*Time.time,.5f));
             }
@@ -49,6 +54,8 @@ namespace Scripts.WarriorScripts
                 {
                     isSlow = false;
                        playerSprite.color = Color.Lerp(Color.blue,Color.white,Mathf.PingPong(2*Time.time,.5f));
+                         powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.slow_img,isSlow);
+                    powerUpUI_script.ActiveFeedbackPowerUp(powerUpUI_script.fast_img,isFast);
                 }
                    playerSprite.color = Color.Lerp(Color.blue,Color.white,Mathf.PingPong(2*Time.time,.5f));
 

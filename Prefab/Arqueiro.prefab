@@ -110,8 +110,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1871444039316433621}
   - component: {fileID: 8656377482579605940}
-  - component: {fileID: 2765080067143656311}
   - component: {fileID: 4378432535809165892}
+  - component: {fileID: 1245975288025562610}
+  - component: {fileID: 2765080067143656311}
   - component: {fileID: 6567331290449612491}
   - component: {fileID: 5452928490776139514}
   - component: {fileID: 679171225466977030}
@@ -192,31 +193,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2765080067143656311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5026083143587491048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b559acc46dc4351d591a8d32c103d82b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  archer: {fileID: 5026083143587491048}
-  warrior: {fileID: 0}
-  arrowPrefab: {fileID: 718397686093822311, guid: a4715594bae926d4ba62751e505899f8,
-    type: 3}
-  player: {fileID: 0}
-  spawnPos: {fileID: 641069643}
-  moveSpeed: 10
-  playerAnimationsScript: {fileID: 679171225466977030}
-  isAttack: 0
-  attackRate: 1
-  flipX: 0
-  player_scriptable: {fileID: 11400000, guid: 972a765c5aab5631d82c05797f99c6dd, type: 2}
-  myPower: 0
 --- !u!50 &4378432535809165892
 Rigidbody2D:
   serializedVersion: 4
@@ -238,6 +214,128 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!82 &1245975288025562610
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5026083143587491048}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 106bb57466daa094db6d191d855f1b04, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2765080067143656311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5026083143587491048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b559acc46dc4351d591a8d32c103d82b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackFx: {fileID: 1245975288025562610}
+  archer: {fileID: 5026083143587491048}
+  warrior: {fileID: 0}
+  arrowPrefab: {fileID: 718397686093822311, guid: a4715594bae926d4ba62751e505899f8,
+    type: 3}
+  player: {fileID: 0}
+  spawnPos: {fileID: 641069643}
+  moveSpeed: 10
+  playerAnimationsScript: {fileID: 679171225466977030}
+  isAttack: 0
+  attackRate: 1
+  flipX: 0
+  player_scriptable: {fileID: 11400000, guid: 972a765c5aab5631d82c05797f99c6dd, type: 2}
+  myPower: 0
 --- !u!114 &6567331290449612491
 MonoBehaviour:
   m_ObjectHideFlags: 0

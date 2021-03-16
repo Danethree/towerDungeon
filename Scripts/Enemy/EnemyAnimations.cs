@@ -1,4 +1,4 @@
-﻿    using System.Collections;
+    using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
 
@@ -7,6 +7,8 @@
             public class EnemyAnimations : MonoBehaviour
         {
             public Animator enemy_animation;
+        public GameObject go;
+        public Transform player;
             void Start()
             {
                 enemy_animation = GetComponent<Animator>();

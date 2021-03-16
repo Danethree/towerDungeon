@@ -12,7 +12,7 @@ namespace Scripts.WarriorScripts
   
     public class PlayerControl : MonoBehaviour,IPlayer
 {
- 
+    public AudioSource attackFx;
    public GameObject archer,warrior,arrowPrefab;
  [HideInInspector] public GameObject player;
    public Transform spawnPos;
@@ -27,9 +27,10 @@ namespace Scripts.WarriorScripts
     public PlayerSO player_scriptable;
     public int myPower;
    private void Start() {
+         myPower = player_scriptable.power;
         player = this.gameObject;
        warrior_rb = GetComponent<Rigidbody2D>();
-       myPower = player_scriptable.power;
+     
        
      
    } 
@@ -96,7 +97,7 @@ namespace Scripts.WarriorScripts
       
         if(!isAttack)
         {
-            
+              SoundManager.instance.PlayAttackFx(attackFx);
             playerAnimationsScript.Attack();
             if(archer.activeSelf)
             {

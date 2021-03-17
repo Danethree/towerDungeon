@@ -5,6 +5,7 @@ using Scripts.WarriorScripts.PlayerArrow;
 //using UnityStandardAssets.CrossPlatformInput;
 using Scripts.WarriorScripts.ScriptableObjects;
 using Scripts;
+using Scripts.WarriorScripts.PlayerFire;
   //This Script is responsable for control Player Inputs
 
 namespace Scripts.WarriorScripts
@@ -108,6 +109,7 @@ namespace Scripts.WarriorScripts
             {
                 StartCoroutine("warriorAttackRate");
             }
+            
         
         }
          
@@ -133,6 +135,23 @@ namespace Scripts.WarriorScripts
                  yield return new WaitForSeconds(attackRate);
                  isAttack = false;
             
+    }
+
+    IEnumerator InvokeFire()
+    {
+        isAttack= true;
+        GameObject fireTemp = Instantiate(firePrefab,spawnPos.position,Quaternion.identity)as GameObject;
+        firePrefab.transform.localScale = transform.localScale;
+        if(flipX)
+        {
+            fireTemp.GetComponent<Fire>().VerifyFirePosition(Vector2.left);
+        }
+        else if(!flipX)
+        {
+            fireTemp.GetComponent<Fire>().VerifyFirePosition(Vector2.right);
+        }
+        yield return new WaitForSeconds(attackRate);
+        isAttack = false;
     }
 
     IEnumerator warriorAttackRate()

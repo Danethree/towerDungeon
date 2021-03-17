@@ -22,6 +22,7 @@ namespace Scripts.Objects
             public GameObject chestVizualizer;
             public GameObject keyTarget;
             public GenerateKeyInChest generateKey_script;
+            public AudioSource chestFx;
 
             void Start() 
             {
@@ -32,6 +33,7 @@ namespace Scripts.Objects
             
             public void OpenTreasureChest()
             {
+                SoundManager.instance.PlayChestOpenFx(chestFx);
                 chestAnimations.OpenChest();
             }
 

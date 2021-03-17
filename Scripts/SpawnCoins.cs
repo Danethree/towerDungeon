@@ -10,6 +10,7 @@ namespace Scripts
      float randomNumbers;
     public GameObject coinPrefab;
      public static SpawnCoins instance;
+     
     void Start()
     {
        if(instance == null)
@@ -29,6 +30,7 @@ namespace Scripts
          randomNumbers = Random.Range(0,10);
         if(randomNumbers<=5)
         {
+            
             Debug.Log(randomNumbers);
             GameObject newPrefab = Instantiate(coinPrefab,spawnPos.position,Quaternion.identity) as GameObject;
         }

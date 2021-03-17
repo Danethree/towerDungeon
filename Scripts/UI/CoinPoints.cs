@@ -11,6 +11,9 @@ namespace Scripts.UI
     
             int pointCoins,recordPointCoins;
            public Text pointCoinsTxt;
+            public AudioSource coinsFx;
+           public AudioClip coinClipFx;
+         
             void Start()
             {
                 pointCoinsTxt = GameObject.FindWithTag("coinIUI").GetComponent<Text>();
@@ -32,6 +35,7 @@ namespace Scripts.UI
             {
                 if(other.gameObject.CompareTag("Player"))
                 {
+                    SoundManager.instance.PlayGetCoinsFx();
                     AddPoints();
                 }
             }

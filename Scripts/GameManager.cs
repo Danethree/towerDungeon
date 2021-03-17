@@ -65,8 +65,13 @@ namespace Scripts
    public void GameOverOptions()
     {
           
-         SceneManager.LoadScene("titleMenu");
+         SceneManager.LoadScene("introScene");
     
+    }
+
+    public void BackToGame()
+    {
+      SceneManager.LoadScene("game");
     }
     public void GameOn()
     {

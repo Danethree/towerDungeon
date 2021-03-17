@@ -8,8 +8,9 @@ namespace Scripts
     {
         public static SoundManager instance;
         public AudioSource musicTheme, musicMenu;
-        public AudioClip musicIntro;
-          AudioSource soundFX;
+        //public AudioClip musicIntro;
+          public AudioSource soundFX,chestFx;
+          public AudioClip coinsFx;
        
 
 
@@ -57,6 +58,17 @@ namespace Scripts
         {
            
         }
+        public void PlayChestOpenFx(AudioSource soundEffects)
+        {
+            soundEffects = chestFx;
+            soundEffects.Play();
+        }
+        public void PlayGetCoinsFx()
+        {
+           
+            soundFX.PlayOneShot(coinsFx);
+        }
+        
       
         
     }

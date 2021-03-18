@@ -17,6 +17,8 @@ namespace Scripts.WarriorScripts
     public Sprite emptyHeart;
     public PlayerAnimations player_anim;
     private Text pointTxt;
+    bool invencibility;
+    public SpriteRenderer playerSprite;
     private void Awake() {
         
         life = playerScriptalbe.life;
@@ -26,12 +28,19 @@ namespace Scripts.WarriorScripts
    
    private void Start() {
         pointTxt = GameObject.Find("pointsTxt").GetComponent<Text>();
+        playerSprite = GetComponent<SpriteRenderer>();
+        invencibility = false;
+        
    }
    
     void Update()
     {
           
        ControlHearts();
+       if(invencibility)
+       {
+             playerSprite.color = Color.Lerp(Color.white,new Color(255,255,255,0),Mathf.PingPong(2*Time.time,.5f));
+       }
        
     }
 
@@ -67,11 +76,27 @@ namespace Scripts.WarriorScripts
 
    public float TakeDamage()
     {
-          player_anim.DamageAnim();
-       life = life -1;
+        if(!invencibility)
+        {
+            player_anim.DamageAnim();
+            life = life -1;
+            StartCoroutine("Invencibility");
+        }
+        
  
 
        return life;
+    }
+    IEnumerator Invencibility()
+    {
+        Debug.Log("começo");
+        invencibility = true;
+      //  playerSprite.color = new Color(255,255,255,76);
+        yield return new WaitForSeconds(2f);
+        Debug.Log("fim");
+        invencibility = false;
+         playerSprite.color = new Color(255,255,255,255);
+
     }
 
    //little-2 hearts
@@ -83,6 +108,8 @@ namespace Scripts.WarriorScripts
        return life;
    }
 
+
+  
    public void VerifyGameCondition()
    {
        if(life<=0)

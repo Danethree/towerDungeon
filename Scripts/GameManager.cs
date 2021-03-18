@@ -71,6 +71,7 @@ namespace Scripts
 
     public void BackToGame()
     {
+      
       SceneManager.LoadScene("game");
     }
     public void GameOn()
@@ -81,7 +82,7 @@ namespace Scripts
 
     public void LoadGameOver()
     {
-    
+       PlayerPrefs.SetInt("COINPOINTS",0);
        SceneManager.LoadScene("GameOver");
        SoundManager.instance.StopMusicTheme();
     }

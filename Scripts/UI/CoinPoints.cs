@@ -18,6 +18,7 @@ namespace Scripts.UI
             {
                 pointCoinsTxt = GameObject.FindWithTag("coinIUI").GetComponent<Text>();
                 recordPointCoins = PlayerPrefs.GetInt("COINSRECORD");
+                pointCoins = PlayerPrefs.GetInt("COINPOINTS");
             }
 
             void Update()
@@ -27,6 +28,7 @@ namespace Scripts.UI
             public void AddPoints()
             {
                 pointCoins +=1;
+                PlayerPrefs.SetInt("COINPOINTS",pointCoins);
                 pointCoinsTxt.text = pointCoins.ToString();
                 SavePointsCoins();
             }
